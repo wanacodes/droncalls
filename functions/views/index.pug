@@ -1,0 +1,14 @@
+extends layout
+        
+        
+block content
+    h1 #{title}
+    //- h1= notes.length
+    //- ul
+    
+    ul.list-group
+        each note in notes
+            li.list-group-item
+                a(href="article/" + note.name)= note.name
+        else
+            li.list-group-item There is no value

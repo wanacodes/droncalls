@@ -1,0 +1,10 @@
+extends layout
+        
+block content
+    h1 #{title}
+    form(action="/articles/add", method="post")
+        #form-group
+            label Notes:
+            input.form-control(name='name', type='text')
+            br
+        input.btn.btn-primary(type="submit", value="Submit")

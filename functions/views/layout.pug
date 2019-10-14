@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        title Note Taker
+        link(rel='stylesheet' type='text/css' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet' type='text/css' href='/css/style.css')
+    body
+        .d-flex.flex-column.flex-md-row.align-items-center.p-3.px-md-4.mb-3.bg-white.border-bottom.shadow-sm
+            h5.my-0.mr-md-auto.font-weight-normal Notes Taker
+            nav.my-2.my-md-0.mr-md-3
+                a.p-2.text-dark(href='/') Home
+                a.p-2.text-dark(href='/articles/add') Add Notes
+        .container
+            block content
+            br
+            hr
+            footer
+                p Copyright &copy; 2017
+    script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
+    script(src='/bower_components/jquery/dist/jquery.js')
+    script(src='/js/main.js')

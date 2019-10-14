@@ -1,0 +1,16 @@
+extends layout
+        
+block content
+    h1 #{title}
+    //- form(action="/articles/update", method="post")
+    form(action="/articles/update", method="post")
+        #form-group
+            label Notes:
+            input.form-control(name='name_edit', type='text' value=notes.name)
+            input(name='name_original', type='text' value=notes.name hidden)
+        br
+        //- input.btn.btn-danger.mr-1(type="submit", value="Delete")
+        //- input.btn.btn-primary(type="submit", value="Update")
+        a.btn.btn-danger.delete-note.mr-1(href='#' data-id=notes.name) Delete
+        input.btn.btn-primary(type="submit", value="Edit")
+        
